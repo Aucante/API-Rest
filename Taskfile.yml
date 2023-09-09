@@ -1,0 +1,16 @@
+# https://taskfile.dev
+
+version: '3'
+
+
+tasks:
+  default:
+    desc: lister toutes les commandes
+    cmds:
+      - task --list-all
+    silent: true
+
+  start-server:
+    desc: démarrer le serveur
+    cmds:
+      - uvicorn main:app --reload

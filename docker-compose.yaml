@@ -1,0 +1,12 @@
+version: "3"
+
+services:
+  api:
+    build:
+      dockerfile: dev.dockerfile
+    volumes:
+      - target: /app
+        source: .
+        type: bind
+    ports:
+      - "8080:8080"
